@@ -1,13 +1,20 @@
 <?php
 
     namespace App\Controllers\API;
-    use CodeIgniter\RESTful\ResourceController;
+
+use App\Models\ClienteModel;
+use CodeIgniter\RESTful\ResourceController;
 
 class Experimento extends ResourceController
 {
+    public function __construct()
+    {
+        $this->model = $this->setModel(new ClienteModel());
+    }
     public function index()
     {
-        //return view('welcome_message');
-        echo "<h1>Clase Experimento</h1>";
+        $cientes = $this->model->findAll();
+        return $this->respond($cientes);
+
     }
 }

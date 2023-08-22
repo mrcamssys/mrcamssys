@@ -14,13 +14,13 @@
 # ENVIRONMENT
 #--------------------------------------------------------------------
 
-# CI_ENVIRONMENT = production
+CI_ENVIRONMENT = development
 
 #--------------------------------------------------------------------
 # APP
 #--------------------------------------------------------------------
 
-# app.baseURL = ''
+app.baseURL = 'http://localhost/cams/'
 # If you have trouble with `.`, you could also use `_`.
 # app_baseURL = ''
 # app.forceGlobalSecureRequests = false
@@ -30,13 +30,24 @@
 # DATABASE
 #--------------------------------------------------------------------
 
-# database.default.hostname = localhost
-# database.default.database = ci4
-# database.default.username = root
-# database.default.password = root
-# database.default.DBDriver = MySQLi
+#local
+ database.default.hostname = localhost
+ database.default.database = banco
+ database.default.username = root
+ database.default.password = 
+ database.default.DBDriver = MySQLi
+
+
 # database.default.DBPrefix =
 # database.default.port = 3306
+
+#produccion
+ #database.default.hostname = sql113.infinityfree.com
+ #database.default.database = if0_34868071_system
+ #database.default.username = if0_34868071
+ #database.default.password = 1Rxb3kvRDzi
+ #database.default.DBDriver = MySQLi
+
 
 # database.tests.hostname = localhost
 # database.tests.database = ci4_test

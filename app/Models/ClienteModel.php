@@ -1,4 +1,4 @@
-<?php namespace App\models;
+<?php namespace App\Models;
 
 use CodeIgniter\Model;
 use CodeIgniter\Validation\Validation;
